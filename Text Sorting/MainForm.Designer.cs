@@ -41,6 +41,7 @@
             this.gunaDragControl1 = new Guna.UI.WinForms.GunaDragControl(this.components);
             this.CloseButton = new Guna.UI.WinForms.GunaCircleButton();
             this.MinimizeButton = new Guna.UI.WinForms.GunaCircleButton();
+            this.ClearButton = new Guna.UI.WinForms.GunaButton();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,7 +56,7 @@
             this.MainTextbox.Multiline = true;
             this.MainTextbox.Name = "MainTextbox";
             this.MainTextbox.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.MainTextbox.Size = new System.Drawing.Size(298, 424);
+            this.MainTextbox.Size = new System.Drawing.Size(298, 384);
             this.MainTextbox.TabIndex = 0;
             // 
             // ProceedButton
@@ -208,12 +209,38 @@
             this.MinimizeButton.TabIndex = 5;
             this.MinimizeButton.Click += new System.EventHandler(this.MinimizeButton_Click);
             // 
+            // ClearButton
+            // 
+            this.ClearButton.AnimationHoverSpeed = 0.07F;
+            this.ClearButton.AnimationSpeed = 0.03F;
+            this.ClearButton.BaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(171)))), ((int)(((byte)(102)))), ((int)(((byte)(221)))));
+            this.ClearButton.BorderColor = System.Drawing.Color.Black;
+            this.ClearButton.DialogResult = System.Windows.Forms.DialogResult.None;
+            this.ClearButton.FocusedColor = System.Drawing.Color.Empty;
+            this.ClearButton.Font = new System.Drawing.Font("Courier New", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ClearButton.ForeColor = System.Drawing.Color.White;
+            this.ClearButton.Image = null;
+            this.ClearButton.ImageSize = new System.Drawing.Size(20, 20);
+            this.ClearButton.Location = new System.Drawing.Point(12, 415);
+            this.ClearButton.Name = "ClearButton";
+            this.ClearButton.OnHoverBaseColor = System.Drawing.Color.FromArgb(((int)(((byte)(151)))), ((int)(((byte)(143)))), ((int)(((byte)(255)))));
+            this.ClearButton.OnHoverBorderColor = System.Drawing.Color.Black;
+            this.ClearButton.OnHoverForeColor = System.Drawing.Color.White;
+            this.ClearButton.OnHoverImage = null;
+            this.ClearButton.OnPressedColor = System.Drawing.Color.Black;
+            this.ClearButton.Size = new System.Drawing.Size(298, 34);
+            this.ClearButton.TabIndex = 7;
+            this.ClearButton.Text = "Clear";
+            this.ClearButton.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ClearButton.Click += new System.EventHandler(this.ClearButton_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(24)))), ((int)(((byte)(27)))), ((int)(((byte)(40)))));
-            this.ClientSize = new System.Drawing.Size(322, 550);
+            this.ClientSize = new System.Drawing.Size(322, 569);
+            this.Controls.Add(this.ClearButton);
             this.Controls.Add(this.CloseButton);
             this.Controls.Add(this.MinimizeButton);
             this.Controls.Add(this.ClipboardButton);
@@ -247,5 +274,6 @@
         private Guna.UI.WinForms.GunaDragControl gunaDragControl1;
         private Guna.UI.WinForms.GunaCircleButton CloseButton;
         private Guna.UI.WinForms.GunaCircleButton MinimizeButton;
+        private Guna.UI.WinForms.GunaButton ClearButton;
     }
 }

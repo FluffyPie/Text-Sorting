@@ -86,5 +86,10 @@ namespace Text_Sorting
         {
             Application.Exit();
         }
+
+        private void ClearButton_Click(object sender, EventArgs e)
+        {
+            MainTextbox.Text = string.Empty;
+        }
     }
 }
